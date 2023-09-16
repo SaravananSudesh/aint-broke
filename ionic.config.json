@@ -1,0 +1,7 @@
+{
+  "name": "aint-broke",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
