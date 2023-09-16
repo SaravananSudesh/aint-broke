@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
+import { SplashScreen } from '@capacitor/splash-screen';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -10,4 +12,8 @@ import { IonicModule } from '@ionic/angular';
 })
 export class AppComponent {
   constructor() {}
+
+  async ngOnInit(){
+    await SplashScreen.hide();
+  }
 }

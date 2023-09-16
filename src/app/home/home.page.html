@@ -1,20 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [scrollY]="false" [scrollX]="false">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="main">
+    <div class="display">
+      <div class="alert">
+        <span [hidden]="!alertActive">{{alertMessage}}</span>
+      </div>
+      <div class="savings">
+        <span>{{savingsString}}</span>
+      </div>
+      <div class="reduce">
+        <span [hidden]="!savingsStored">{{reduceString}}</span>
+      </div>
+   </div>
+  
+    <div class="keypad">
+      <ion-grid>
+        <ion-row>
+          <ion-col><button class="num-key" (click)="enterNum(7)">7</button></ion-col>
+          <ion-col><button class="num-key" (click)="enterNum(8)">8</button></ion-col>
+          <ion-col><button class="num-key" (click)="enterNum(9)">9</button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><button class="num-key" (click)="enterNum(4)">4</button></ion-col>
+          <ion-col><button class="num-key" (click)="enterNum(5)">5</button></ion-col>
+          <ion-col><button class="num-key" (click)="enterNum(6)">6</button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><button class="num-key" (click)="enterNum(1)">1</button></ion-col>
+          <ion-col><button class="num-key" (click)="enterNum(2)">2</button></ion-col>
+          <ion-col><button class="num-key" (click)="enterNum(3)">3</button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><button class="num-key" (click)="enterNum(0)">0</button></ion-col>
+          <ion-col><button class="num-key" (click)="clearNum()">C</button></ion-col>
+          <ion-col><button class="num-key" (click)="backNum()">&#9224;</button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><button class="num-key save-key" [hidden]="savingsStored" (click)="setSavings()">SET SAVINGS</button></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><button class="num-key reduce-key" [hidden]="!savingsStored" (click)="reduceSavings()">REDUCE</button></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </div>
 </ion-content>

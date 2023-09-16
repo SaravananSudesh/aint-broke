@@ -1,27 +1,54 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.main{
+    background-color: #003337;
+    height: 100vh;
+    padding: 16px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.display{
+    color: #414738;
+    background-color: #aabb86;
+    font-family: orbitron;
+    padding: 16px;
+    text-align: right;
+    padding-top: calc(100vh - 500px - 6rem);
+
+    .alert{
+        font-size: 20px;
+        height: 40px;
+    }
+
+    .savings{
+        font-size: 48px;
+        height: 67.2px;
+    }
+
+    .reduce{
+        font-size: 32px;
+        height: 40px;
+    }
+
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.keypad{
+    margin-top: 16px;
 }
 
-#container a {
-  text-decoration: none;
+.num-key{
+    color: #fff;
+    background-color: #828689;
+    font-family: orbitron;
+    font-size: 32px;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    height: 4rem;
+}
+.save-key{
+    background-color: #eb641c;
+    font-size: 24px;
+}
+
+.reduce-key{
+    background-color: #e20009;
+    font-size: 24px;
 }
